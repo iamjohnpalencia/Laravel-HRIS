@@ -17,8 +17,7 @@
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      <!-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -27,7 +26,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">          
@@ -39,7 +38,6 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <!-- nav-item menu-is-opening menu-open -->
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('personal') }}" class="nav-link {{ (request()->is('home/personal')) ? 'active' : '' }}">
@@ -161,15 +159,13 @@
               <p>Change Password</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item">  
+            <a href="{{ route('signout') }}" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
               <p>Logout</p>
             </a>
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </aside>

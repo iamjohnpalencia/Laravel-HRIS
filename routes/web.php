@@ -32,4 +32,4 @@ Route::get('login', [App\Http\Controllers\CustomAuthController::class, 'index'])
 Route::post('custom-login', [App\Http\Controllers\CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 Route::get('registration', [App\Http\Controllers\CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [App\Http\Controllers\CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
-Route::get('signout', [App\Http\Controllers\CustomAuthController::class, 'signOut'])->name('signout');
+Route::post('signout', [App\Http\Controllers\CustomAuthController::class, 'signOut'])->name('signout');
