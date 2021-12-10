@@ -3,36 +3,48 @@
 @section('content')
 <body class="hold-transition login-page">
 <div class="login-box">
-  <div class="login-logo">
+  <!-- <div class="login-logo">
     <a href="#"><b>Admin</b>LTE</a>
-  </div>
-  <!-- /.login-logo -->
+  </div> -->
+
   <div class="card">
 
       <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login.custom') }}">
         @csrf
-
         <div class="input-group mb-3">
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <input id="accountcode" type="text" class="form-control @error('accountcode') is-invalid @enderror" name="accountcode" value="{{ old('accountcode') }}" required  autofocus placeholder = "Account Code">
             <div class="input-group-append">
               <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
+                <span class="fas fa-user"></span>
               </div>
             </div>
             
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+            @if ($errors->has('accountcode'))
+                <span class="invalid-feedback">
+                    <strong>{{ $errors->first('accountcode') }}</strong>
                 </span>
-            @enderror
-            
+            @endif               
         </div>
 
         <div class="input-group mb-3">
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+            <input id="usercode" type="text" class="form-control @error('usercode') is-invalid @enderror" name="usercode" value="{{ old('usercode') }}" required  autofocus placeholder = "User Code">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            </div>
+            @if ($errors->has('usercode'))
+                <span class="invalid-feedback">
+                    <strong>{{ $errors->first('usercode') }}</strong>
+                </span>
+             @endif                  
+        </div>
+
+        <div class="input-group mb-3">
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder = "Password">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -63,13 +75,11 @@
           </div>
         </form>
 
-
-        <p class="mb-1">
-          <a href="forgot-password.html">I forgot my password</a>
-        </p>
+        @if (Route::has('register'))
         <p class="mb-0">
-          <a href="register.html" class="text-center">Register a new membership</a>
+          <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
         </p>
+        @endif
       </div>
 
   </div>
