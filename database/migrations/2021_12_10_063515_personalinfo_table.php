@@ -24,7 +24,6 @@ class PersonalinfoTable extends Migration
 
             $table->string('department');
             $table->string('supervisor');
-            $table->string('designation');
             $table->string('emp_type');
             $table->string('location');
             $table->string('datehired');
