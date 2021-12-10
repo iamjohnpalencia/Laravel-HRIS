@@ -27,4 +27,24 @@ class EmployeeController extends Controller
     {   
         return view('personal');
     }
+    public function timesheet()
+    {   
+        return view('timesheet');
+    }
+    public function daily()
+    {   
+        return view('daily');
+    }
+    public function leaveledger()
+    {   
+        return view('leave');
+    }
+    public function announcement()
+    {   
+        return view('announcement');
+    }
+    public function update()
+    {   
+        return view('update');
+    }
 }

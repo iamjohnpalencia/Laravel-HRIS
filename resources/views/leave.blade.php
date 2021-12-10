@@ -33,12 +33,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Personal Information</h1>
+            <h1 class="m-0">Leave Ledger</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Personal Information</li>
+              <li class="breadcrumb-item active">Leave Ledger</li>
             </ol>
           </div>
         </div>
