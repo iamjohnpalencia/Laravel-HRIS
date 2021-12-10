@@ -21,8 +21,32 @@ class PersonalinfoTable extends Migration
             $table->string('designation');
             $table->string('email')->unique();
             $table->string('birthdate');
+
+            $table->string('department');
+            $table->string('supervisor');
+            $table->string('designation');
+            $table->string('emp_type');
+            $table->string('location');
+            $table->string('datehired');
+            $table->string('team');
+            $table->string('date_reg');
+            $table->string('date_sep');
+            $table->string('contract_start');
+            $table->string('contract_end');
+
+            $table->string('monthly_rate');
+            $table->string('daily_rate');
+            $table->string('hourly_rate');
+            $table->string('sequence_no');
+            $table->string('approver');
+
+            $table->string('tin');
+            $table->string('phic');
+            $table->string('sss');
+            $table->string('hdmf');
+
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+
             $table->rememberToken();
             $table->timestamps();
         });
